@@ -1,8 +1,12 @@
 name: Publish new article
+
 on:
   schedule:
     - cron: "0 6 * * *"  # tous les jours à 6h du matin
   workflow_dispatch:  # pour pouvoir le lancer manuellement
+
+permissions:
+  contents: write   # ✅ donne le droit d'écrire (push) dans le dépôt
 
 jobs:
   build:
